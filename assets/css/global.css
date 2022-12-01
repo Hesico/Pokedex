@@ -14,7 +14,7 @@ body {
 .content {
     padding: 1rem;
     background-color: #add8e6;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
 }
 
@@ -32,3 +32,5 @@ body {
         background-size: 100%;
     }
 }
+
+
