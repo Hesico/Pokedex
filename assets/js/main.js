@@ -62,6 +62,7 @@ function convertPokemonHTML(pokemon) {
     `
 }
 
+//<img src="assets\\img\\back.png"/>
 function openCard(id) {
     let pokemon = inPagePokemons.find(e => e.number == id);
     let contentPage = document.getElementById("contentPage");
@@ -71,9 +72,16 @@ function openCard(id) {
 
     contentPage.innerHTML += `
         <div class="card ${pokemon.type}" id="card"> 
-            <div class="cardMain"> 
+            <div class="cardMain" style="background-image: linear-gradient(
+                to bottom,
+                rgba(0, 194, 90, 0.8),
+                rgb(0, 165, 78, 0.8)),
+                url(${pokemon.img});
+            background-size: cover;
+            background-position: top; "> 
                 <div class="cardButtons">
-                    <button class="backButton" onClick="back(${id})"><img src="assets\\img\\back.png"/></button> 
+                
+                    <button class="backButton" onClick="back(${id})"></button> 
                     <button class="likeButton"><img src="assets\\img\\hearth.png"/></button> 
                 </div>
                 <span class="name">${pokemon.name}</span>

@@ -8,7 +8,6 @@
     position: absolute;
     top: 0;
     left: 0;
-    
 }
 
 
@@ -22,16 +21,26 @@
 .cardMain .cardButtons {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: 2rem 0 0.5rem 0;
 }
 
 .cardMain .cardButtons .backButton{
     margin-left: 1rem;
     background-color: Transparent;
-    border: 0;
+    border: 1px solid #000;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    transition: all 0.5s;
+}
+
+.cardMain .cardButtons .backButton:hover {
+    background-color: rgba(255,255,255,0.3);
 }
 
 .cardMain .cardButtons .likeButton{
+    height: 100%;
     margin-right: 1rem;
     background-color: Transparent;
     border: 0;
